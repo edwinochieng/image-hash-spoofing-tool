@@ -45,7 +45,6 @@ export async function POST(request: NextRequest) {
     return Response.json({
       originalHash,
       modifiedHash,
-      modifiedImageUrl: `/public/${modifiedFilename}`,
     });
   } catch (error) {
     console.error("Error processing image:", error);

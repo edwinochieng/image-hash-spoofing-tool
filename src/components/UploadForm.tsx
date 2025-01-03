@@ -10,7 +10,6 @@ export default function UploadForm() {
   const [result, setResult] = useState<{
     originalHash: string;
     modifiedHash: string;
-    modifiedImageUrl: string;
   } | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,13 +94,6 @@ export default function UploadForm() {
             <span className="font-semibold">Modified Hash: </span>
             {result.modifiedHash}
           </p>
-          <a
-            href={result.modifiedImageUrl}
-            download
-            className="block mt-4 text-blue-600 hover:underline"
-          >
-            Download Modified Image
-          </a>
         </div>
       )}
     </div>
